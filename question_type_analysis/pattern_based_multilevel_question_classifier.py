@@ -39,14 +39,14 @@ class PatternBasedMultiLevelQuestionClassifier:
         question_patterns = self.extract_pattern_from_question(question_str, pattern_match_strategy1)
         if len(question_patterns) == 0:
             print('extract failed')
-            return question_str
+            return q
         pattern_match_result = PatternMatchResult()
         for qtpfile in PatternBasedMultiLevelQuestionClassifier.question_type_pattern_files:
-            question_type_pattern_file1 = '/questionTypePatterns' + qtpfile.get_file()
+            question_type_pattern_file1 = qtpfile.get_file()
             print(qtpfile.get_file())
-            question_type_pattern1 = self.extract_pattern_from_question(question_type_pattern_file1)
-            if question_type_pattern_file1 is not None:
-                pattern_match_result_items = self.get_pattern_match_result_items(question_patterns,question_type_pattern1)
+            question_type_pattern1 = self.extract_question_type_pattern(question_type_pattern_file1)
+            if question_type_pattern1 is not None:
+                pattern_match_result_items = self.get_pattern_match_result_items(question_patterns, question_type_pattern1)
                 if len(pattern_match_result_items) == 0:
                     print('在问题类型模式中未找到匹配项')
                 else:
@@ -54,26 +54,25 @@ class PatternBasedMultiLevelQuestionClassifier:
         pattern_match_result_items = pattern_match_result.get_all_pattern_match_result()
         if len(pattern_match_result_items) == 0:
             print('无匹配')
-            return question_str
+            return q
         if len(pattern_match_result_items) > 1:
             i = 1
             for item in pattern_match_result_items:
-                print('xuhao'+i)
-                print('\twen'+item.get_origin())
-                print('\tmoshi' + item.get_pattern())
-                print('\tfenlei'+item.get_type())
+                print('序号'+str(i))
+                print('\t问题'+item.get_origin())
+                print('\t模式' + item.get_pattern())
+                print('\t分类'+item.get_type())
                 i += 1
         for file in pattern_match_result.get_questiontypepatternfiles_compacttoloose():
+            print(file.get_file()+'是否允许多匹配')
             i = 1
             for item in pattern_match_result.get_pattern_match_result(file):
-                print('xuhao'+i)
-                print('\twen'+item.get_origin())
-                print('\tmoshi' + item.get_pattern())
-                print('\tfenlei'+item.get_type())
+                print('序号'+str(i))
+                print('\t问题'+item.get_origin())
+                print('\t模式' + item.get_pattern())
+                print('\t分类'+item.get_type())
                 i += 1
-        return self.get_pattern_match_result_selector().select(question_str, pattern_match_result)
-
-
+        return self.get_pattern_match_result_selector().select(q, pattern_match_result)
 
     def get_pattern_match_strategy(self):
         return self.pattern_match_strategy
@@ -117,16 +116,19 @@ class PatternBasedMultiLevelQuestionClassifier:
         return question_patterns
 
     def extract_question_type_pattern(self, question_type_pattern_file1):
-        value = self.question_pattern_cache[question_type_pattern_file1]
+        value = self.question_pattern_cache.get(question_type_pattern_file1)
         if value is not None:
             return value
         types = []
         patterns = []
-        with open(question_type_pattern_file1, 'r') as f:
+        with open('../files/questionTypePattern/'+question_type_pattern_file1, 'r') as f:
             lines = f.readlines()
-            for line in lines:
-                types.append(line.split(' ')[0])
-                patterns.append(line.split(' ')[1])
+            try:
+                for line in lines:
+                    types.append(line.split(' ')[0])
+                    patterns.append(line.split(' ')[1].replace('\n', ''))
+            except Exception as e:
+                print(e)
         question_type_pattern = QuestionTypePattern()
         question_type_pattern.set_patterns(patterns)
         question_type_pattern.set_types(types)
@@ -141,13 +143,13 @@ class PatternBasedMultiLevelQuestionClassifier:
         if question_type_pattern is None or len(question_type_pattern.get_patterns()) == 0:
             return None
         pattern_match_result_items = []
-        patterns = []
-        types = []
+        patterns = question_type_pattern.get_patterns()
+        types = question_type_pattern.get_types()
         p_length = len(patterns)
         for i in range(p_length):
             pattern = patterns[i]
             for question_pattern in question_patterns:
-                m = re.match(pattern,question_pattern)
+                m = re.search(pattern,question_pattern)
                 if m:
                     item = PatternMatchResultItem()
                     item.set_origin(question_pattern)
@@ -181,10 +183,12 @@ if __name__ == '__main__':
     pattern_match_strategy.add_question_pattern(QuestionPattern.TermWithNatures)
     pattern_match_strategy.add_question_pattern(QuestionPattern.Natures)
     pattern_match_strategy.add_question_type_pattern_files('QuestionTypePatternLevel1_true.txt')
+    pattern_match_strategy.add_question_type_pattern_files('QuestionTypePatternLevel2_true.txt')
+    pattern_match_strategy.add_question_type_pattern_files('QuestionTypePatternLevel3_true.txt')
     pattern_match_result_selector = PatternMatchResultSelector()
-    question_classifier = PatternBasedMultiLevelQuestionClassifier(pattern_match_strategy,
-                                                                   pattern_match_result_selector)
-    a = question_classifier.extract_pattern_from_question('头疼怎么办', pattern_match_strategy)
-    print(a)
+    question_classifier = PatternBasedMultiLevelQuestionClassifier(pattern_match_strategy, pattern_match_result_selector)
+    # a = question_classifier.extract_pattern_from_question('早上头疼怎么办', pattern_match_strategy)
+    question = question_classifier.classify('头疼吃什么药')
+    print(question.get_question_type())
 
 

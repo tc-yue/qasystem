@@ -1,5 +1,4 @@
 import os
-
 from question_type_analysis import question_pattern
 
 
@@ -36,10 +35,16 @@ class PatternMatchStrategy:
 if __name__ == '__main__':
     pattern_match_strategy = PatternMatchStrategy()
     pattern_match_strategy.add_question_pattern(question_pattern.QuestionPattern.Question)
-    pattern_match_strategy.add_question_type_pattern_files(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir)) +
-                      '/files/questionTypePattern/QuestionTypePatternsLevel1_true.txt')
-    pattern_match_strategy.get_strategy_des()
+    pattern_match_strategy.add_question_pattern(question_pattern.QuestionPattern.TermWithNatures)
+    pattern_match_strategy.add_question_pattern(question_pattern.QuestionPattern.Natures)
+    pattern_match_strategy.add_question_type_pattern_files('QuestionTypePatternsLevel1_true.txt')
+    pattern_match_strategy.add_question_type_pattern_files('QuestionTypePatternsLevel2_true.txt')
+    pattern_match_strategy.add_question_type_pattern_files('QuestionTypePatternsLevel3_true.txt')
+    print(pattern_match_strategy.get_strategy_des())
 
+
+    # pattern_match_strategy.add_question_type_pattern_files(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir)) +
+    #                   '/files/questionTypePattern/QuestionTypePatternsLevel1_true.txt')
     # #     上层路径
     # print(os.path.abspath(os.path.dirname(__file__)+os.path.sep+".."))
     # # 上上层路径

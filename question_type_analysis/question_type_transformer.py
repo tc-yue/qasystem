@@ -1,13 +1,14 @@
 from model.questiontype import QuestionType
 
 
+# Question type string to type enum
 class QuestionTypeTransformer:
     def __init__(self, question_type):
         self.question_type = question_type
 
     def transform(self):
         if 'Medicine' in self.question_type:
-            return QuestionType.Medicine_name
+            return QuestionType.Medicine
         elif 'Price' in self.question_type:
             return QuestionType.Price
         elif 'Hospital' in self.question_type:
@@ -23,4 +24,4 @@ class QuestionTypeTransformer:
 
 if __name__ == '__main__':
     # q = Questiontype.Person_name
-    print(QuestionTypeTransformer('Person->Multi5').transform())
+    print(QuestionTypeTransformer('Doctor->Multi5').transform())

@@ -2,12 +2,13 @@ from enum import Enum,unique
 
 @unique
 class QuestionType(Enum):
-    Null = '未知'
-    Medicine_name = 'medicine'
+    Null = 'unknown'
+    Medicine= 'medicine'
     Price = 'price'
     Hospital = 'hospital'
     Doctor = 'doctor'
     Solution = 'solution'
+    Description = 'description'
 
     def __init__(self, des):
         self.des = des
@@ -19,7 +20,7 @@ class QuestionType(Enum):
         pos = 'unknown'
         if QuestionType.Doctor == self:
             pos = 'nr'
-        elif QuestionType.Medicine_name == self:
+        elif QuestionType.Medicine == self:
             pos = 'nz'
         elif QuestionType.Price == self:
             pos = 'm'
@@ -30,9 +31,9 @@ class QuestionType(Enum):
         return pos
 
 if __name__ == '__main__':
-    type1 = QuestionType.Person_name
+    type1 = QuestionType.Doctor
     print(type1)
     print(type1.get_pos())
-    a = QuestionType(QuestionType.Person_name)
+    a = QuestionType(QuestionType.Doctor)
     print(a.get_des())
 

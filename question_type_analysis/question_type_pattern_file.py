@@ -3,7 +3,6 @@ class QuestionTypePatternFile:
         self.multi_match = True
         self.file = ''
 
-    @property
     def get_file(self):
         return self.file
 

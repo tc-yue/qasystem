@@ -1,26 +1,23 @@
-Medicine->Multi1 .*(RW.RWMedicine).*
-Medicine->Multi2 .*(N.Medicine).*(RW.RWOrdinaryMulti).*
-Medicine->Multi3 .*(RW.RWOrdinaryMulti).*(N.Medicine).*
-Medicine->Multi4 .*(RW.RWFood).*(N.Medicine).*
-Medicine->Multi5 .*(N.Medicine).*(RW.RWFood).*
-Medicine->Single1 .*(N.Medicine).*(RW.RWOrdinarySingle).*
-Medicine->Single2 .*(RW.RWOrdinarySingle).*(N.Medicine).* 
-
-Price->Single1 .*(RW.RWPrice).* 
-Price->Single2 .*(N.NumberNoun).*(RW.RWNumber).*
-Price->Single3 .*(v|n).*(uj).*(N.NumberNoun).*
-
-Doctor->Multi1 .*v.*(N.Doctor).*
-Doctor->Multi2 .*(N.Doctor).*(RW.RWPersonMulti|RW.RWOrdinaryMulti).*
-Doctor->Single1 .*(N.Doctor).*(RW.RWPersonSingle|RW.RWOrdinarySingle).*
- 
-Hospital->Single1 .*(RW.RWOrdinarySingle|RW.RWLocationSingle).*(N.Hospital).*
-Hospital->Multi1 .*(RW.RWOrdinaryMulti|RW.RWLocationMulti).*(N.Hospital).*
-
-Solution->Method1 .*(N.MethodOfConcept).*(RWOrdinarySingle).*
-Solution->Method2 .*(N.MethodOfConcept).*(RWOrdinaryMulti).*
-Solution->Method3 .*(RWOrdinarySingle).*(N.MethodOfConcept).*
-Solution->Method4 .*(N.MethodOfConcept).*(RW.RWDescriptive).*
-Solution->Method4 .*(n|v|a).*(RW.RWDescriptive).*(v).*
-Solution->Method5 .*(RW.RWDescriptive).*(v).*(n|v|a)
-Solution->Method6 .*(RW.RWMethod).*
+Medicine->Multi1 .*(rwedicine).*
+Medicine->Multi2 .*(nmedicine).*(rwordinarymulti).*
+Medicine->Multi3 .*(rwordinarymulti).*(nmedicine).*
+Medicine->Multi4 .*(rwfood).*(nmedicine).*
+Medicine->Multi5 .*(nmedicine).*(rwfood).*
+Medicine->Single1 .*(nmedicine).*(rwordinarysingle).*
+Medicine->Single2 .*(rwrordinarysingle).*(nmedicine).* 
+Price->Single1 .*(rwprice).*
+Price->Single2 .*(nnumbernoun).*(rwnumber).*
+Price->Single3 .*(v|n).*(uj).*(nnumbernoun).*
+Doctor->Multi1 .*v.*(ndoctor).*
+Doctor->Multi2 .*(ndoctor).*(rwpersonmulti|rwordinarymulti).*
+Doctor->Single1 .*(ndoctor).*(rwpersonsingle|rwordinarysingle).*
+Hospital->Single1 .*(rwordinarysingle|rwlocationsingle).*(nhospital).*
+Hospital->Multi1 .*(rwordinarymulti|rwlocationmulti).*(nhospital).*
+Solution->Method1 .*(nmethodofconcept).*(rwordinarysingle).*
+Solution->Method2 .*(nmethodofconcept).*(rwordinarymulti).*
+Solution->Method3 .*(rwordinarysingle).*(nmethodofconcept).*
+Solution->Method4 .*(nmethodofconcept).*(rwdescriptive).*
+Solution->Method4 .*(n|v|a).*(rwdescriptive).*(v).*
+Solution->Method5 .*(rwdescriptive).*(v).*(n|v|a)
+Solution->Method6 .*(rwmethod).*
+Solution->Method6 .*(rwmethod).*

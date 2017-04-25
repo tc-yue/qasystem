@@ -13,8 +13,8 @@ class PatternMatchResult:
         temp_dict = {}
         string_list = []
         for file in self.q_r_dict.keys():
-            string_list.append(file.getFile())
-            self.q_r_dict[file.getFile()] = file
+            string_list.append(file.get_file())
+            temp_dict[file.get_file()] = file
         sorted(string_list)
         if not compact_toloose:
             string_list.reverse()
@@ -24,8 +24,8 @@ class PatternMatchResult:
         return result
 
     def add_pattern_match_result(self, file, items):
-        value = self.q_r_dict[file]
-        if not value:
+        value = self.q_r_dict.get(file)
+        if value is None:
             value = items
         else:
             value.extend(items)
@@ -37,5 +37,5 @@ class PatternMatchResult:
     def get_all_pattern_match_result(self):
         value = []
         for v in self.q_r_dict.values():
-            value.append(v)
+            value.extend(v)
         return value

@@ -26,17 +26,17 @@ class PatternMatchResultSelector:
                 else:
                     value += 1
                 type_dict[key] = value
-            entrys = sorted(type_dict.items(),key=lambda d:d[1] ,reverse=True)
-            if len(entrys) > 1:
-                for entry in entrys:
+            entry_s = sorted(type_dict.items(), key=lambda d: d[1], reverse=True)
+            if len(entry_s) > 1:
+                for entry in entry_s:
                     question1.add_candidate_question_type(entry[0])
-                selected_type = entrys[0][0]
+                selected_type = entry_s[0][0]
                 question1.set_question_type(selected_type)
-                if selected_type in question1.get_candidate_question_types()
+                if selected_type in question1.get_candidate_question_types():
                     question1.remove_candidate_question_type(selected_type)
                 return question1
             else:
-                selected_type = entrys[0][0]
+                selected_type = entry_s[0][0]
                 question1.set_question_type(selected_type)
                 return question1
         question1.set_question_type(QuestionType.Solution)

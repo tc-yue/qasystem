@@ -43,5 +43,5 @@ class Question:
 if __name__ == '__main__':
     q = Question()
     q.set_question('头疼怎么办')
-    q.set_question_type(QuestionType.Person_name)
+    q.set_question_type(QuestionType.Doctor)
     print(q.get_question_type())

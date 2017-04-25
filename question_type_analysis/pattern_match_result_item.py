@@ -1,15 +1,15 @@
 # 模式匹配结果项
 class PatternMatchResultItem:
     def __init__(self):
-        self.stype = ''
+        self.type1 = ''
         self.origin = ''
         self.pattern = ''
 
     def get_type(self):
-        return self.stype
+        return self.type1
 
-    def set_type(self, stype):
-        self.stype = stype
+    def set_type(self, type1):
+        self.type1 = type1
 
     def get_origin(self):
         return self.origin

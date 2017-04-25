@@ -6,6 +6,8 @@ arg = {'api_key':'T8r3Z4d4PkDpzysjWVLG4GPmguFTthFSKeapPlhk', 'text': '头疼全�
 
 
 class WordParser:
+    jieba.load_userdict('../files/dic/jieba_pos.txt')
+
     def __init__(self, sentence):
         self.sentence = sentence
 
@@ -26,6 +28,5 @@ class WordParser:
 
 if __name__ == '__main__':
     b = WordParser('头疼怎么办').parse()
-
     print(b)
 
