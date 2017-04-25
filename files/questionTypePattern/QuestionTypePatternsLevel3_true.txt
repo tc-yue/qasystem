@@ -1,0 +1,26 @@
+Medicine->Multi1 .*(RW.RWMedicine).*
+Medicine->Multi2 .*(N.Medicine).*(RW.RWOrdinaryMulti).*
+Medicine->Multi3 .*(RW.RWOrdinaryMulti).*(N.Medicine).*
+Medicine->Multi4 .*(RW.RWFood).*(N.Medicine).*
+Medicine->Multi5 .*(N.Medicine).*(RW.RWFood).*
+Medicine->Single1 .*(N.Medicine).*(RW.RWOrdinarySingle).*
+Medicine->Single2 .*(RW.RWOrdinarySingle).*(N.Medicine).* 
+
+Price->Single1 .*(RW.RWPrice).* 
+Price->Single2 .*(N.NumberNoun).*(RW.RWNumber).*
+Price->Single3 .*(v|n).*(uj).*(N.NumberNoun).*
+
+Doctor->Multi1 .*v.*(N.Doctor).*
+Doctor->Multi2 .*(N.Doctor).*(RW.RWPersonMulti|RW.RWOrdinaryMulti).*
+Doctor->Single1 .*(N.Doctor).*(RW.RWPersonSingle|RW.RWOrdinarySingle).*
+ 
+Hospital->Single1 .*(RW.RWOrdinarySingle|RW.RWLocationSingle).*(N.Hospital).*
+Hospital->Multi1 .*(RW.RWOrdinaryMulti|RW.RWLocationMulti).*(N.Hospital).*
+
+Solution->Method1 .*(N.MethodOfConcept).*(RWOrdinarySingle).*
+Solution->Method2 .*(N.MethodOfConcept).*(RWOrdinaryMulti).*
+Solution->Method3 .*(RWOrdinarySingle).*(N.MethodOfConcept).*
+Solution->Method4 .*(N.MethodOfConcept).*(RW.RWDescriptive).*
+Solution->Method4 .*(n|v|a).*(RW.RWDescriptive).*(v).*
+Solution->Method5 .*(RW.RWDescriptive).*(v).*(n|v|a)
+Solution->Method6 .*(RW.RWMethod).*
