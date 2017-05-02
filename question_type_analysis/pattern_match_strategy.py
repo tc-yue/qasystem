@@ -1,35 +1,34 @@
-import os
 from question_type_analysis import question_pattern
 
 
 class PatternMatchStrategy:
     def __init__(self):
-        self.question_type_pattern_files = []
-        self.question_patterns = []
+        self.__question_type_pattern_files = []
+        self.__question_patterns = []
 
     def add_question_type_pattern_files(self, question_type_file):
-        self.question_type_pattern_files.append(question_type_file)
+        self.__question_type_pattern_files.append(question_type_file)
 
     def add_question_pattern(self, question_onepattern):
-        self.question_patterns.append(question_onepattern)
+        self.__question_patterns.append(question_onepattern)
 
     def enable_question_type_pattern_file(self, question_type_pattern_file):
-        if question_type_pattern_file in self.question_type_pattern_files:
+        if question_type_pattern_file in self.__question_type_pattern_files:
             return True
         else:
             return False
 
     def enable_question_pattern(self, question_onepattern):
-        if question_onepattern in self.question_patterns:
+        if question_onepattern in self.__question_patterns:
             return True
         else:
             return False
 
     def get_strategy_des(self):
         string = ''
-        for question_type_pattern_file in self.question_type_pattern_files:
+        for question_type_pattern_file in self.__question_type_pattern_files:
             string = string+question_type_pattern_file+':'
-        for question_onepattern in self.question_patterns:
+        for question_onepattern in self.__question_patterns:
             string = string+str(question_onepattern)+':'
         return string
 if __name__ == '__main__':

@@ -3,19 +3,18 @@ from model.questiontype import QuestionType
 
 # Question type string to type enum
 class QuestionTypeTransformer:
-    def __init__(self, question_type):
-        self.question_type = question_type
 
-    def transform(self):
-        if 'Medicine' in self.question_type:
+    @staticmethod
+    def transform(question_type):
+        if 'Medicine' in question_type:
             return QuestionType.Medicine
-        elif 'Price' in self.question_type:
+        elif 'Price' in question_type:
             return QuestionType.Price
-        elif 'Hospital' in self.question_type:
+        elif 'Hospital' in question_type:
             return QuestionType.Hospital
-        elif 'Doctor' in self.question_type:
+        elif 'Doctor' in question_type:
             return QuestionType.Doctor
-        elif 'Solution' in self.question_type:
+        elif 'Solution' in question_type:
             return QuestionType.Solution
 
         else:
@@ -24,4 +23,4 @@ class QuestionTypeTransformer:
 
 if __name__ == '__main__':
     # q = Questiontype.Person_name
-    print(QuestionTypeTransformer('Doctor->Multi5').transform())
+    print(QuestionTypeTransformer.transform('Doctor->Multi5'))

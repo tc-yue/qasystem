@@ -1,9 +1,8 @@
 from .question_type_transformer import QuestionTypeTransformer
-from .pattern_match_strategy import PatternMatchStrategy
-from .pattern_match_result import  PatternMatchResult
-from model.question import Question
 from model.question import QuestionType
-# 模式匹配结果选择器
+"""
+模式匹配结果选择器
+"""
 
 
 class PatternMatchResultSelector:
@@ -16,10 +15,10 @@ class PatternMatchResultSelector:
             pattern_match_result_items = pattern_match_result.get_pattern_match_result(file)
             if pattern_match_result_items is None:
                 continue
-            type_dict={}
+            type_dict = {}
             for pattern_match_result_item in pattern_match_result_items:
                 type1 = pattern_match_result_item.get_type()
-                key = QuestionTypeTransformer(type1).transform()
+                key = QuestionTypeTransformer.transform(type1)
                 value = type_dict.get(key)
                 if value is None:
                     value = 1

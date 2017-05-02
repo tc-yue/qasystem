@@ -1,32 +1,22 @@
+import jieba
 import jieba.posseg
-import requests
-from parser.LTML import LTML
-
-arg = {'api_key':'T8r3Z4d4PkDpzysjWVLG4GPmguFTthFSKeapPlhk', 'text': '头疼全身无力怎么办', 'pattern': 'dp', 'format': 'json','xml_input':'true'}
 
 
 class WordParser:
     jieba.load_userdict('../files/dic/jieba_pos.txt')
 
-    def __init__(self, sentence):
-        self.sentence = sentence
-
-    def parse(self):
+    @staticmethod
+    def parse(sentence):
         word_list = []
-        for item in jieba.posseg.lcut(self.sentence):
+        for item in jieba.posseg.lcut(sentence):
             word_list.append(tuple(item))
         return word_list
 
-    def get_dependencies(self,wordslist):
-        print(wordslist)
-        ltml=LTML()
-        ltml.build_from_words([("这", "r"),("是", "v")])
-        xml = ltml.tostring()
-        arg['text'] = xml
-        return requests.post(url='http://api.ltp-cloud.com/analysis/', data=arg).json()
-
+    @staticmethod
+    def lcut(sentence):
+        return jieba.lcut(sentence)
 
 if __name__ == '__main__':
-    b = WordParser('头疼怎么办').parse()
+    b = WordParser.parse('请您给介绍几味适合我吃的医生')
     print(b)
 

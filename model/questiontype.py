@@ -1,9 +1,13 @@
 from enum import Enum,unique
+"""
+问题类型
+"""
+
 
 @unique
 class QuestionType(Enum):
     Null = 'unknown'
-    Medicine= 'medicine'
+    Medicine = 'medicine'
     Price = 'price'
     Hospital = 'hospital'
     Doctor = 'doctor'

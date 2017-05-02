@@ -23,12 +23,15 @@ Medicine 用什么药
 Medicine 吃点什么药
 Medicine 吃些什么药
 Medicine 用点什么药
-Medicine 药有哪几种
+Medicine 药有哪
+Medicine 药有什么
 Medicine 什么药好
 Medicine 如何吃药
 Medicine 吃什么药
 Medicine 有什么药
 Medicine 几种药
+Medicine 怎样吃药
+Medicine 怎么吃药
 Price 多少钱
 Price 费用多少
 Price 价格是多少

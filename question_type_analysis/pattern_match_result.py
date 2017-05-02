@@ -1,7 +1,11 @@
-# 模式匹配结果
+"""
+模式匹配结果
+"""
+
+
 class PatternMatchResult:
     def __init__(self):
-        self.q_r_dict = {}
+        self.__q_r_dict = {}
 
     def get_questiontypepatternfiles_loosetocompact(self):
         return self.fromcompact_toloose(False)
@@ -12,7 +16,7 @@ class PatternMatchResult:
     def fromcompact_toloose(self, compact_toloose):
         temp_dict = {}
         string_list = []
-        for file in self.q_r_dict.keys():
+        for file in self.__q_r_dict.keys():
             string_list.append(file.get_file())
             temp_dict[file.get_file()] = file
         sorted(string_list)
@@ -24,18 +28,18 @@ class PatternMatchResult:
         return result
 
     def add_pattern_match_result(self, file, items):
-        value = self.q_r_dict.get(file)
+        value = self.__q_r_dict.get(file)
         if value is None:
             value = items
         else:
             value.extend(items)
-        self.q_r_dict[file] = value
+        self.__q_r_dict[file] = value
 
     def get_pattern_match_result(self, file):
-        return self.q_r_dict[file]
+        return self.__q_r_dict[file]
 
     def get_all_pattern_match_result(self):
         value = []
-        for v in self.q_r_dict.values():
+        for v in self.__q_r_dict.values():
             value.extend(v)
         return value

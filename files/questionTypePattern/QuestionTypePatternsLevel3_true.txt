@@ -1,14 +1,14 @@
-Medicine->Multi1 .*(rwedicine).*
+Medicine->Multi1 .*(rwmedicine).*
 Medicine->Multi2 .*(nmedicine).*(rwordinarymulti).*
 Medicine->Multi3 .*(rwordinarymulti).*(nmedicine).*
 Medicine->Multi4 .*(rwfood).*(nmedicine).*
 Medicine->Multi5 .*(nmedicine).*(rwfood).*
 Medicine->Single1 .*(nmedicine).*(rwordinarysingle).*
 Medicine->Single2 .*(rwrordinarysingle).*(nmedicine).* 
+Medicine .*(药有)(rwordianaymulti|rwordinarysingle).*
 Price->Single1 .*(rwprice).*
 Price->Single2 .*(nnumbernoun).*(rwnumber).*
 Price->Single3 .*(v|n).*(uj).*(nnumbernoun).*
-Doctor->Multi1 .*v.*(ndoctor).*
 Doctor->Multi2 .*(ndoctor).*(rwpersonmulti|rwordinarymulti).*
 Doctor->Single1 .*(ndoctor).*(rwpersonsingle|rwordinarysingle).*
 Hospital->Single1 .*(rwordinarysingle|rwlocationsingle).*(nhospital).*

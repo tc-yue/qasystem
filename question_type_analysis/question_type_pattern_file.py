@@ -1,19 +1,24 @@
+"""
+问题类型模式文件
+"""
+
+
 class QuestionTypePatternFile:
     def __init__(self):
-        self.multi_match = True
-        self.file = ''
+        self.__multi_match = True
+        self.__file = ''
 
     def get_file(self):
-        return self.file
+        return self.__file
 
     def set_file(self, file):
-        self.file = file
+        self.__file = file
 
     def is_multi_match(self):
-        return self.multi_match
+        return self.__multi_match
 
     def set_multi_match(self, multi_match):
-        self.multi_match = multi_match
+        self.__multi_match = multi_match
 
     def hash_code(self):
         pass
