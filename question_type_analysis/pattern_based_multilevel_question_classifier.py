@@ -1,18 +1,26 @@
-from question_type_analysis import pattern_match_strategy
-from question_type_analysis.pattern_match_result_selector import PatternMatchResultSelector
-from question_type_analysis import question_type_pattern_file
-from question_type_analysis.question_pattern import QuestionPattern
-from question_type_analysis.pattern_match_result import PatternMatchResult
-from question_type_analysis.pattern_match_result_item import PatternMatchResultItem
+import os
+import re
+import logging
 from model.question import Question
 from parser.word_parser import WordParser
 from parser.ltp_denpendency_parsing import LtpDependencyParsing
-import os
-import re
+from question_type_analysis.question_pattern import QuestionPattern
+from question_type_analysis.pattern_match_result import PatternMatchResult
+from question_type_analysis.pattern_match_strategy import PatternMatchStrategy
+from question_type_analysis.pattern_match_result_item import PatternMatchResultItem
+from question_type_analysis.question_type_pattern_file import QuestionTypePatternFile
+from question_type_analysis.pattern_match_result_selector import PatternMatchResultSelector
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s',
+                    filename='../qa.log',
+                    filemode='w')
+"""
+模式匹配判断类型
+5种方式 和问题，词和词性，词性，主干词和词性，主干词性 匹配
+"""
 
 
 class PatternBasedMultiLevelQuestionClassifier:
-    path = '../files/'
 
     def __init__(self, pattern_match_strategy1, pattern_match_result_selector1):
         self.__question_pattern_cache = {}
@@ -20,10 +28,11 @@ class PatternBasedMultiLevelQuestionClassifier:
         self.__question_type_pattern_files = []
         self.__pattern_match_strategy = pattern_match_strategy1
         self.__pattern_match_result_selector = pattern_match_result_selector1
-        file_path = os.path.dirname(__file__).replace('question_type_analysis', 'files') + '/questionTypePattern'
+        file_path = os.path.abspath(os.path.dirname(__file__)+os.path.sep+os.pardir) + '/files/questionTypePattern'
         for item in sorted(os.listdir(file_path)):
+            logging.info('\t模式文件'+item)
             attr = item.split('_')
-            file = question_type_pattern_file.QuestionTypePatternFile()
+            file = QuestionTypePatternFile()
             file.set_file(item)
             if 'true' in attr[1]:
                 multi_match = True
@@ -32,9 +41,8 @@ class PatternBasedMultiLevelQuestionClassifier:
             file.set_multi_match(multi_match)
             self.__question_type_pattern_files.append(file)
 
-    def classify(self, question_str):
-        q = Question()
-        q.set_question(question_str)
+    def classify(self, q):
+        question_str = q.get_question()
         pattern_match_strategy1 = self.get_pattern_match_strategy()
         question_patterns = self.extract_pattern_from_question(question_str, pattern_match_strategy1)
         if len(question_patterns) == 0:
@@ -115,7 +123,7 @@ class PatternBasedMultiLevelQuestionClassifier:
         response = LtpDependencyParsing.get_dp_json(question1)
         try:
             dp_data = response.json()
-            question1 = LtpDependencyParsing.get_main_part(dp_data).get_main_part()
+            question1 = LtpDependencyParsing.get_main_part(dp_data)
             if pattern_match_strategy1.enable_question_pattern(QuestionPattern.MainPartNaturePattern) or \
                     pattern_match_strategy1.enable_question_pattern(QuestionPattern.MainPartPattern):
                 mpnp = self.__question_pattern_cache.get(question1 + 'mainpnp')
@@ -136,8 +144,8 @@ class PatternBasedMultiLevelQuestionClassifier:
                     question_patterns.append(mpnp_str)
                     question_patterns.append(mpp_str)
         except Exception as e:
-            print('main_part failed')
-            print(e)
+            logging.error('main_part failed')
+            logging.error(e)
         print(question_patterns)
         return question_patterns
 
@@ -147,14 +155,14 @@ class PatternBasedMultiLevelQuestionClassifier:
             return value
         types = []
         patterns = []
-        with open('../files/questionTypePattern/'+question_type_pattern_file1, 'r') as f:
+        with open(os.path.abspath(os.path.dirname(__file__)+os.path.sep+os.pardir)+'/files/questionTypePattern/'+question_type_pattern_file1, 'r') as f:
             lines = f.readlines()
             try:
                 for line in lines:
                     types.append(line.split(' ')[0])
                     patterns.append(line.split(' ')[1].replace('\n', ''))
             except Exception as e:
-                print(e)
+                logging.error(e)
         question_type_pattern = QuestionTypePattern()
         question_type_pattern.set_patterns(patterns)
         question_type_pattern.set_types(types)
@@ -184,10 +192,17 @@ class PatternBasedMultiLevelQuestionClassifier:
                     pattern_match_result_items.append(item)
         return pattern_match_result_items
 
+"""
+问题类型模式
+指定问题类型和问题模式的关系
+"""
+
 
 class QuestionTypePattern:
     def __init__(self):
+        # 所有问题类型
         self.types = []
+        # 所有问题模式
         self.patterns = []
 
     def get_types(self):
@@ -204,7 +219,7 @@ class QuestionTypePattern:
 
 
 if __name__ == '__main__':
-    pattern_match_strategy = pattern_match_strategy.PatternMatchStrategy()
+    pattern_match_strategy = PatternMatchStrategy()
     pattern_match_strategy.add_question_pattern(QuestionPattern.Question)
     pattern_match_strategy.add_question_pattern(QuestionPattern.TermWithNatures)
     pattern_match_strategy.add_question_pattern(QuestionPattern.Natures)
@@ -221,7 +236,9 @@ if __name__ == '__main__':
         input_flag = input('继续 a  退出 b\n')
         if input_flag == 'a':
             input_question = input('input question\n')
-            question = question_classifier.classify(input_question)
+            question = Question()
+            question.set_question(input_question)
+            question = question_classifier.classify(question)
             print(question.get_question_type())
         elif input_flag == 'b':
             break

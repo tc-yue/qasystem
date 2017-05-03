@@ -52,7 +52,7 @@ class Question:
         return self.__evidences
 
     def add_evidences(self, evidences):
-        self.__evidences.append(evidences)
+        self.__evidences.extend(evidences)
 
     def add_evidence(self, evidence):
         self.__evidences.append(evidence)
@@ -121,11 +121,11 @@ class Question:
                     candidate_answers.append(candidate_answer)
         candidate_answers = sorted(candidate_answers, key=lambda ans: ans.get_score(), reverse=True)
         if candidate_answers is not None:
-            candidate_answers = CandidateAnswerSelect.candidate_answer_filter(self, candidate_answers)
+            candidate_answers = CandidateAnswerSelect.candidate_answer_filter(self.get_question(), candidate_answers)
         if len(candidate_answers) > 0:
             base_score = candidate_answers[0].get_score()
             for candidate_answer in candidate_answers:
-                score = candidate_answer.get_score/base_score
+                score = candidate_answer.get_score()/base_score
                 candidate_answer.set_score(score)
         return candidate_answers
 

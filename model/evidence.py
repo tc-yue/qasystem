@@ -3,7 +3,7 @@ from parser.word_parser import WordParser
 import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s',
-                    filename='test.log',
+                    filename='../qa.log',
                     filemode='w')
 """
 证据由title：问题 和snippet：回答 组成 对于同一个问题来说

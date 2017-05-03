@@ -6,13 +6,14 @@ from whoosh import scoring
 import jieba
 from model.question import Question
 from model.evidence import Evidence
+import os
 
 
 class ChineseTokenizer(Tokenizer):
     def __call__(self, value, positions=False, chars=False, keeporiginal=False, removestops=True, start_pos=0,
                  start_char=0, mode='', **kwargs):
         # 去除停用词及符号
-        with open('usr/stop_words_ch.txt', 'r')as f:
+        with open(os.path.abspath(os.path.dirname(__file__)+os.path.sep+os.pardir)+'/ir/usr/stop_words_ch.txt', 'r')as f:
             stop_list = f.read().split('\n')
         assert isinstance(value, text_type), "%r is not unicode" % value
         # 使用结巴搜索引擎模式分词库进行分词
@@ -31,27 +32,24 @@ class ChineseTokenizer(Tokenizer):
                 # 通过生成器返回每个分词的结果token
 
 
-def ChineseAnalyzer():
-    return ChineseTokenizer()
-
-
-def index_open(word):
-    results_list = []
-    ix = open_dir('indexer')
-    with ix.searcher(weighting=scoring.TF_IDF()) as search:
-        parser = QueryParser('content', ix.schema).parse(word)
-        # 最多30个结果
-        results = search.search(parser, limit=30)
-        # 每个结果最多300个字符
-        results.fragmenter.charlimit = 200
-        for hit in results:
-            results_list.append((hit['title'], hit['content']))
-    return results_list
-
-
 class DataSource:
-    def __init__(self):
-        pass
+    @staticmethod
+    def ChineseAnalyzer():
+        return ChineseTokenizer()
+
+    @staticmethod
+    def index_open(word):
+        results_list = []
+        ix = open_dir(os.path.abspath(os.path.dirname(__file__)+os.path.sep+os.pardir)+'/ir/indexer')
+        with ix.searcher(weighting=scoring.TF_IDF()) as search:
+            parser = QueryParser('content', ix.schema).parse(word)
+            # 最多30个结果
+            results = search.search(parser, limit=30)
+            # 每个结果最多300个字符
+            results.fragmenter.charlimit = 200
+            for hit in results:
+                results_list.append((hit['title'], hit['content']))
+        return results_list
 
     @staticmethod
     def get_evidence(question_str):
@@ -64,7 +62,7 @@ class DataSource:
     @staticmethod
     def search_evidence(query):
         evidences = []
-        elements = index_open(query)
+        elements = DataSource.index_open(query)
         for item in elements:
             evidence = Evidence()
             evidence.set_title(item[0])
@@ -74,5 +72,5 @@ class DataSource:
 
 
 if __name__ == '__main__':
-    a = DataSource()
-    print(a.get_evidence('牙疼'))
+    a = DataSource
+    print(a.get_evidence('牙疼怎么办').get_evidences())

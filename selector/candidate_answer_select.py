@@ -2,6 +2,10 @@ from model.candidate_answer_collection import CandidateAnswerCollection
 from model.candidate_answer import CandidateAnswer
 from parser.word_parser import WordParser
 import logging
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s',
+                    filename='../qa.log',
+                    filemode='w')
 
 
 class CandidateAnswerSelect:

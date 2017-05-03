@@ -1,7 +1,11 @@
 from model.candidate_answer import CandidateAnswer
-import logging
-import re
 from parser.word_parser import WordParser
+import re
+import logging
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s',
+                    filename='../qa.log',
+                    filemode='w')
 """
 候选答案评分组件
 """
@@ -38,7 +42,7 @@ class AnswerScore:
             if hot == evidence_words[i]:
                 hot_term_offes.append(i)
         # 候选答案的位置数组
-        for candidate_answer in candidate_answer_collection:
+        for candidate_answer in candidate_answer_collection.get_all_candidate_answer():
             candidate_answer_offes = []
             for i in range(len(evidence_words)):
                 if evidence_words[i] == candidate_answer.get_answer():
@@ -59,7 +63,7 @@ class AnswerScore:
     def term_frequency_score(self, question1, evidence1, candidate_answer_collection):
         title_list = evidence1.get_title_words()
         snippet_list = evidence1.get_snippet_words()
-        for candidate_answer in candidate_answer_collection:
+        for candidate_answer in candidate_answer_collection.get_all_candidate_answer():
             ans = candidate_answer.get_answer()
             word_frequency = title_list.count(ans)*2 + snippet_list.count(ans)
             if word_frequency is None:
@@ -158,7 +162,7 @@ class AnswerScore:
 
     def score(self, question, evidence, candidate_answer_collection):
         self.term_frequency_score(question, evidence, candidate_answer_collection)
-        self.term_distance_mini_score(question, evidence, candidate_answer_collection)
-        self.term_distance_score(question, evidence, candidate_answer_collection)
+        # self.term_distance_mini_score(question, evidence, candidate_answer_collection)
+        # self.term_distance_score(question, evidence, candidate_answer_collection)
         self.textual_align_score(question, evidence, candidate_answer_collection)
         self.hot_score(question, evidence, candidate_answer_collection)

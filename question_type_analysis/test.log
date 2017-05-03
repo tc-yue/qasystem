@@ -1,4 +1,0 @@
-2017-05-03 05:18:02,649 connectionpool.py [line:207] INFO Starting new HTTP connection (1): api.ltp-cloud.com
-2017-05-03 05:18:03,174 connectionpool.py [line:387] DEBUG "POST /analysis/ HTTP/1.1" 200 None
-2017-05-03 05:18:13,543 connectionpool.py [line:207] INFO Starting new HTTP connection (1): api.ltp-cloud.com
-2017-05-03 05:18:13,888 connectionpool.py [line:387] DEBUG "POST /analysis/ HTTP/1.1" 200 None

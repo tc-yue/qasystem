@@ -1,11 +1,8 @@
-import logging
 import re
-from model.evidence import Evidence
-
+import logging
 logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-                    datefmt='%a, %d %b %Y %H:%M:%S',
-                    filename='evidence.log',
+                    format='%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s',
+                    filename='../qa.log',
                     filemode='w')
 """
 组合证据评分组件对证据评分：
@@ -31,7 +28,7 @@ class EvidenceScore:
         logging.debug('evidence二元评分开始')
         question_terms = question1.get_words()
         patterns = []
-        for i in range(len(question_terms)):
+        for i in range(len(question_terms)-1):
             pattern = question_terms[i] + question_terms[i + 1]
             patterns.append(pattern)
         score = 0
@@ -40,7 +37,7 @@ class EvidenceScore:
             if count > 0:
                 score += count * 2
         score *= self.bigram_weight
-        logging.debug('evidence 二元评分:' + score)
+        logging.debug('evidence 二元评分:' + str(score))
         evidence1.add_score(score)
 
     def term_score(self, question1, evidence1, idf_dict):
@@ -81,7 +78,7 @@ class EvidenceScore:
             if count > 0:
                 score += count * 2
         score *= self.bigram_weight
-        logging.debug('evidence skip二元评分:' + score)
+        logging.debug('evidence skip二元评分:' + str(score))
         return score
 
     @staticmethod

@@ -2,7 +2,7 @@ from model.candidate_answer import CandidateAnswer
 import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s',
-                    filename='test.log',
+                    filename='../qa.log',
                     filemode='w')
 """
 候选答案集合

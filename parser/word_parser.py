@@ -1,9 +1,10 @@
 import jieba
 import jieba.posseg
+import os
 
 
 class WordParser:
-    jieba.load_userdict('../files/dic/jieba_pos.txt')
+    jieba.load_userdict(os.path.abspath(os.path.dirname(__file__)+os.path.sep+os.pardir)+'/files/dic/jieba_pos.txt')
 
     @staticmethod
     def parse(sentence):

@@ -1,5 +1,6 @@
 from .question_type_transformer import QuestionTypeTransformer
 from model.question import QuestionType
+import logging
 """
 模式匹配结果选择器
 """
@@ -10,6 +11,7 @@ class PatternMatchResultSelector:
     def select(question1, pattern_match_result):
         all_pattern_match_result_items = pattern_match_result.get_all_pattern_match_result()
         if all_pattern_match_result_items is None or len(all_pattern_match_result_items) == 0:
+            logging.info('所有问题类型模式匹配结果为空')
             return None
         for file in pattern_match_result.get_questiontypepatternfiles_compacttoloose():
             pattern_match_result_items = pattern_match_result.get_pattern_match_result(file)
