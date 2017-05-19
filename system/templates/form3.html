@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="{{url_for('static', filename='jquery.js')}}"></script>
+    <script type=text/javascript>
+    var $SCRIPT_ROOT = {{request.script_root|tojson|safe}};
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("li").append("<br>");
+        $("li").append($("#test").val());
+        $("li").append("<br>");
+        $.post("/test",
+        {
+          word:$("#test").val()
+        },
+        function(data){
+          $("li").append(data);
+        });
+      });
+    });
+    </script>
+</head>
+<body>
+    <p align="center"><legend >Please input:</legend></p>
+    <p align="center"><input name="word" id="test" placeholder="say it" value="{{ word }}"></p>
+    <p align="center"><button type="submit">say</button></p>
+    <li>hi</li>
+
+</body>
+</html>
