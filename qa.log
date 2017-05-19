@@ -1,7 +1,2 @@
-2017-05-04 05:22:44,487 pattern_based_multilevel_question_classifier.py [line:33] INFO 	模式文件QuestionTypePatternsLevel1_true.txt
-2017-05-04 05:22:44,487 pattern_based_multilevel_question_classifier.py [line:33] INFO 	模式文件QuestionTypePatternsLevel2_true.txt
-2017-05-04 05:22:44,487 pattern_based_multilevel_question_classifier.py [line:33] INFO 	模式文件QuestionTypePatternsLevel3_true.txt
-2017-05-04 05:23:04,262 connectionpool.py [line:207] INFO Starting new HTTP connection (1): api.ltp-cloud.com
-2017-05-04 05:23:04,915 connectionpool.py [line:387] DEBUG "POST /analysis/ HTTP/1.1" 200 None
-2017-05-04 05:23:05,004 question_type_transformer.py [line:14] DEBUG 问题类型转换Medicine
-2017-05-04 05:23:05,005 question_type_transformer.py [line:14] DEBUG 问题类型转换Medicine
+2017-05-19 22:44:08,028 evidence_score.py [line:55] DEBUG evidence term评分开始
+2017-05-19 22:44:08,028 evidence_score.py [line:62] DEBUG 忽略问题中长度为一的词到

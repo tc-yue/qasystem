@@ -5,6 +5,7 @@
 
 class PatternMatchResult:
     def __init__(self):
+        # 问题类型模式文件——模式匹配结果项
         self.__q_r_dict = {}
 
     def get_questiontypepatternfiles_loosetocompact(self):
@@ -27,6 +28,7 @@ class PatternMatchResult:
             result.append(temp_dict[item])
         return result
 
+    # 参数：问题类型模式文件，模式匹配结果项
     def add_pattern_match_result(self, file, items):
         value = self.__q_r_dict.get(file)
         if value is None:
@@ -35,6 +37,7 @@ class PatternMatchResult:
             value.extend(items)
         self.__q_r_dict[file] = value
 
+    # 参数：问题类型模式文件
     def get_pattern_match_result(self, file):
         return self.__q_r_dict[file]
 

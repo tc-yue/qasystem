@@ -19,9 +19,3 @@ class QuestionTypePatternFile:
 
     def set_multi_match(self, multi_match):
         self.__multi_match = multi_match
-
-    def hash_code(self):
-        pass
-
-    def equals(self, obj):
-        pass

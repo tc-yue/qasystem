@@ -3,7 +3,7 @@ Medicine .*(v|a)/(rwfood).*
 Medicine->method .*(rwdescriptive)/(vmedicine).*
 Medicine .*(nmedicine)/(rwfood).*
 Medicine .*(rwfood)/(.)/(nmedicine).*
-Medicine->multi .*(rwordinarymulti|rwordinarysingle)/(.)/(nmedicine).*
+Medicine .*(rwordinarymulti|rwordinarysingle)/(.)/(nmedicine).*
 Price .*(nprice)/(v)/(rwnumber).*
 Price .*(n)/(v)/(rwprice).*
 Price .*(ndoctor)/(.)/(rwprice).*

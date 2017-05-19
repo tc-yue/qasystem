@@ -1,5 +1,5 @@
-from ir.data_source import DataSource
-from ir.data_source import ChineseTokenizer
+from evidence_retrieval.data_source import DataSource
+from evidence_retrieval.data_source import ChineseTokenizer
 import os
 a = DataSource
 print(a.get_evidence('牙疼'))

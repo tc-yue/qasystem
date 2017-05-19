@@ -1,10 +1,10 @@
-from ir.data_source import DataSource
-from ir.data_source import ChineseTokenizer
-from question_type_analysis.pattern_based_multilevel_question_classifier import PatternBasedMultiLevelQuestionClassifier
+from evidence_retrieval.data_source import DataSource
+from question_type_analysis.pattern_based_question_classifier import PatternBasedMultiLevelQuestionClassifier
 from selector.candidate_answer_select import *
 from score.evidence_score import EvidenceScore
 from score.answer_score import AnswerScore
 from model.questiontype import QuestionType
+from model.question import Question
 from question_type_analysis.question_pattern import QuestionPattern
 from question_type_analysis.pattern_match_strategy import PatternMatchStrategy
 from question_type_analysis.pattern_match_result_selector import PatternMatchResultSelector
@@ -14,7 +14,8 @@ logging.basicConfig(level=logging.DEBUG,
                     filename='../qa.log',
                     filemode='w')
 """
-使用问答系统实现要指定4个组件 1：问答系统使用的数据源  2：候选答案提取器
+使用问答系统实现要指定4个组件
+1：问答系统使用的数据源  2：候选答案提取器
 3.证据评分组件 4.候选答案评分组件
 """
 
@@ -48,7 +49,7 @@ class QuestionAnsweringSystem:
     def get_question_classifier(self):
         return self.__question_classifier
 
-    # # 数据源
+    # 数据源
     # def set_data_source(self, data_source):
     #     self.__data_source = data_source
     #
@@ -76,8 +77,43 @@ class QuestionAnsweringSystem:
     def get_evidence_score(self):
         return self.__evidence_score
 
-    # 利用数据源搜索并回答问题
+    # 回答问题
     def answer_question(self, question_str):
+        question = Question()
+        question.set_question(question_str)
+        question = self.__question_classifier.classify(question)
+        logging.info('开始处理Question:'+question.get_question()+'问题类型:'+str(question.get_question_type()))
+        if question.get_question_type() == QuestionType.Null:
+            logging.error('未知问题类型，拒绝回答')
+        if question.get_question_type() != QuestionType.Solution:
+            question = self.kb_based_answer_question(question)
+        else:
+            question = self.ir_based_answer_question(question)
+        logging.info('候选答案: '+question.get_expect_answer())
+
+    @staticmethod
+    def kb_based_answer_question(question):
+        question = DataSource.select_medicine(question)
+        return question
+
+    def ir_based_answer_question(self, question):
+        question = DataSource.get_evidence(question)
+        if len(question.get_evidences()) == 0:
+            logging.debug('无evidence')
+            return question
+        i = 1
+        for evidence in question.get_evidences():
+            logging.debug('开始处理Evidence：' + str(i))
+            i += 1
+            self.__evidence_score.score(question, evidence)
+            logging.debug(evidence.get_title_words())
+        # 候选证据排序，获得评分第一的设定为期待答案
+        evidences = sorted(question.get_evidences(), key=lambda ans: ans.get_score(), reverse=True)
+        question.set_expect_answer(evidences[0].get_snippet())
+        return question
+
+    # 利用数据源搜索并回答所有问题
+    def common_answer_question(self, question_str):
         question = DataSource.get_evidence(question_str)
         if question is not None:
             question = self.__question_classifier.classify(question)

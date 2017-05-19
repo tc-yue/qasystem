@@ -46,39 +46,43 @@ class PatternBasedMultiLevelQuestionClassifier:
         pattern_match_strategy1 = self.get_pattern_match_strategy()
         question_patterns = self.extract_pattern_from_question(question_str, pattern_match_strategy1)
         if len(question_patterns) == 0:
-            print('extract failed')
+            logging.error('提取问题模式失败')
             return q
         pattern_match_result = PatternMatchResult()
         for qtpfile in self.__question_type_pattern_files:
             question_type_pattern_file1 = qtpfile.get_file()
-            print(qtpfile.get_file())
+            logging.info('处理问题类型模式文件： '+qtpfile.get_file())
             question_type_pattern1 = self.extract_question_type_pattern(question_type_pattern_file1)
             if question_type_pattern1 is not None:
                 pattern_match_result_items = self.get_pattern_match_result_items(question_patterns, question_type_pattern1)
                 if len(pattern_match_result_items) == 0:
-                    print('在问题类型模式中未找到匹配项')
+                    logging.info('在问题类型模式中未找到匹配项: '+question_type_pattern_file1)
                 else:
                     pattern_match_result.add_pattern_match_result(qtpfile,pattern_match_result_items)
+                    logging.info('在问题类型模式中找到匹配项: '+question_type_pattern_file1)
+            else:
+                logging.info('处理问题类型模式文件失败: '+question_type_pattern_file1)
         pattern_match_result_items = pattern_match_result.get_all_pattern_match_result()
         if len(pattern_match_result_items) == 0:
-            print('无匹配')
+            logging.info('问题没有匹配到任何模式')
             return q
         if len(pattern_match_result_items) > 1:
+            logging.info('问题匹配到多个模式')
             i = 1
             for item in pattern_match_result_items:
-                print('序号'+str(i))
-                print('\t问题'+item.get_origin())
-                print('\t模式' + item.get_pattern())
-                print('\t分类'+item.get_type())
+                logging.info('序号: '+str(i))
+                logging.info('\t问题: '+item.get_origin())
+                logging.info('\t模式: ' + item.get_pattern())
+                logging.info('\t分类: '+item.get_type())
                 i += 1
         for file in pattern_match_result.get_questiontypepatternfiles_compacttoloose():
-            print(file.get_file()+'是否允许多匹配')
+            logging.info(file.get_file()+'是否允许多匹配')
             i = 1
             for item in pattern_match_result.get_pattern_match_result(file):
-                print('序号'+str(i))
-                print('\t问题'+item.get_origin())
-                print('\t模式' + item.get_pattern())
-                print('\t分类'+item.get_type())
+                logging.info('序号'+str(i))
+                logging.info('\t问题'+item.get_origin())
+                logging.info('\t模式' + item.get_pattern())
+                logging.info('\t分类'+item.get_type())
                 i += 1
         return PatternMatchResultSelector.select(q, pattern_match_result)
 
@@ -94,16 +98,17 @@ class PatternBasedMultiLevelQuestionClassifier:
     def set_pattern_match_result_selector(self, pattern_match_result_selector1):
         self.__pattern_match_result_selector = pattern_match_result_selector1
 
-    # 抽取问题的模式
+    # 抽取问题的模式 question1：str
     def extract_pattern_from_question(self, question1, pattern_match_strategy1):
         question_patterns = []
+        # 去除问题中的前后空白字符
         question1 = question1.strip()
+        logging.info('问题:'+question1)
         if pattern_match_strategy1.enable_question_pattern(QuestionPattern.Question):
             question_patterns.append(question1)
         if pattern_match_strategy1.enable_question_pattern(QuestionPattern.TermWithNatures) or \
                 pattern_match_strategy1.enable_question_pattern(QuestionPattern.Natures):
-            term_with_nature = self.__question_pattern_cache.get(
-                question1 + 'term_with_natures')
+            term_with_nature = self.__question_pattern_cache.get(question1 + 'term_with_natures')
             nature = self.__question_pattern_cache.get(question1 + 'nature')
             if term_with_nature is None or nature is None:
                 words = WordParser.parse(question1)
@@ -118,8 +123,12 @@ class PatternBasedMultiLevelQuestionClassifier:
                     nature_str += word[1]
                 self.__question_pattern_cache[question1 + 'term_with_nature'] = term_with_nature_str
                 self.__question_pattern_cache[question1 + 'nature'] = nature_str
-                question_patterns.append(term_with_nature_str)
-                question_patterns.append(nature_str)
+                if pattern_match_strategy1.enable_question_pattern(QuestionPattern.TermWithNatures):
+                    question_patterns.append(term_with_nature_str)
+                    logging.info('词和词性序列： '+term_with_nature_str)
+                if pattern_match_strategy1.enable_question_pattern(QuestionPattern.Natures):
+                    question_patterns.append(nature_str)
+                    logging.info('词性序列： '+ nature_str)
         response = LtpDependencyParsing.get_dp_json(question1)
         try:
             dp_data = response.json()
@@ -139,14 +148,17 @@ class PatternBasedMultiLevelQuestionClassifier:
                             mpnp_str += '/'
                         i += 1
                         mpnp_str += word[1]
-                    self.__question_pattern_cache[question1 + 'mainpnp'] = mpnp_str
-                    self.__question_pattern_cache[question1 + 'mainpp'] = mpp_str
-                    question_patterns.append(mpnp_str)
-                    question_patterns.append(mpp_str)
+                    if pattern_match_strategy1.enable_question_pattern(QuestionPattern.MainPartNaturePattern):
+                        self.__question_pattern_cache[question1 + 'mainpnp'] = mpnp_str
+                        question_patterns.append(mpnp_str)
+                        logging.info('主谓宾词性序列'+mpnp_str)
+                    if pattern_match_strategy1.enable_question_pattern(QuestionPattern.MainPartPattern):
+                        self.__question_pattern_cache[question1 + 'mainpp'] = mpp_str
+                        question_patterns.append(mpp_str)
+                        logging.info('主谓宾词和词性序列'+mpp_str)
         except Exception as e:
             logging.error('main_part failed')
             logging.error(e)
-        print(question_patterns)
         return question_patterns
 
     def extract_question_type_pattern(self, question_type_pattern_file1):
@@ -195,6 +207,7 @@ class PatternBasedMultiLevelQuestionClassifier:
 """
 问题类型模式
 指定问题类型和问题模式的关系
+如1、Person-> Multi2 ...
 """
 
 

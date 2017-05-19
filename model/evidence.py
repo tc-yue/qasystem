@@ -8,7 +8,6 @@ logging.basicConfig(level=logging.DEBUG,
 """
 证据由title：问题 和snippet：回答 组成 对于同一个问题来说
 不同证据的重要性不一样，所以证据有分值，证据有多个候选答案
-jieba.load dict
 """
 
 

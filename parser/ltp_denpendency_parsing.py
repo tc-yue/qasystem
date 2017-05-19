@@ -1,6 +1,9 @@
 import requests
 
 
+"""哈工大api调用"""
+
+
 class LtpDependencyParsing:
     arg = {
         'api_key': 'T8r3Z4d4PkDpzysjWVLG4GPmguFTthFSKeapPlhk',
@@ -43,9 +46,8 @@ class LtpDependencyParsing:
         return ''.join([i[1]for i in s_list])
 
 if __name__ == '__main__':
-    # print(LtpDependencyParsing('头疼吃什么药好得').get_dp_plain())
     print(LtpDependencyParsing.get_dp_json('头疼吃什么药好得快').json())
-    response = LtpDependencyParsing.get_dp_json('光的传播速度是多少')
+    response = LtpDependencyParsing.get_dp_json('早上起来后一直头疼，吃什么药好得快')
     print(response)
     dp_data = response.json()
     print(LtpDependencyParsing.get_main_part(dp_data))

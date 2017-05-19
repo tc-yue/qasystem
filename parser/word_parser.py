@@ -18,6 +18,7 @@ class WordParser:
         return jieba.lcut(sentence)
 
 if __name__ == '__main__':
-    b = WordParser.parse('请您给介绍几味适合我吃的医生')
+    b = WordParser.parse('早上起来腹泻很严重，吃阿司匹林还是什么药')
     print(b)
+
 

@@ -2,10 +2,6 @@ from model.candidate_answer import CandidateAnswer
 from parser.word_parser import WordParser
 import re
 import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s',
-                    filename='../qa.log',
-                    filemode='w')
 """
 候选答案评分组件
 """

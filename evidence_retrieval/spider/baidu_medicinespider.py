@@ -9,7 +9,7 @@ headers = {
     "Referer": "http://baike.baidu.com/wikitag/taglist?tagId=75954",
     'User-Agent': agent
 }
-data={'limit':'24','timeout':'3000','filterTags':'[]','tagId':'75954','fromelemma':'false','contentLength':'40','page':'0'}
+data = {'limit':'24','timeout':'3000','filterTags':'[]','tagId':'75954','fromelemma':'false','contentLength':'40','page':'0'}
 for i in range(500,600):
     print(i)
     data['page']=str(i)

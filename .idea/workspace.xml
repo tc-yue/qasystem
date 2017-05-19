@@ -2,26 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a492e14-5a63-4daa-8366-29ab6a59fe1f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/test.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/test.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/model/test.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/question_type_analysis/test.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/evidence_retrieval/web_search.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/evidence_retrieval/indexer/MAIN_8w9rr1sonp7vh4wv.seg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/dic/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/dic/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/dic/test.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/dic/test.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/dic/word.local.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/.idea/ir.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/indexer/MAIN_WRITELOCK" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/indexer/_MAIN_1.toc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/search.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/spider/baikesipde.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/spider/xunyispider.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ir/spider/zhihu_spider.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ir/data_source.py" afterPath="$PROJECT_DIR$/evidence_retrieval/data_source.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ir/search_engine/index.py" afterPath="$PROJECT_DIR$/evidence_retrieval/index.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ir/spider/baidu_medicinespider.py" afterPath="$PROJECT_DIR$/evidence_retrieval/spider/baidu_medicinespider.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ir/spider/qaspider.py" afterPath="$PROJECT_DIR$/evidence_retrieval/spider/qaspider.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ir/templates/form.html" afterPath="$PROJECT_DIR$/system/templates/form.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ir/templates/form2.html" afterPath="$PROJECT_DIR$/system/templates/form2.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ir/usr/stop_words_ch.txt" afterPath="$PROJECT_DIR$/files/dic/stop_words_ch.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/question_type_analysis/pattern_based_multilevel_question_classifier.py" afterPath="$PROJECT_DIR$/question_type_analysis/pattern_based_question_classifier.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ir/data_source.py" afterPath="$PROJECT_DIR$/ir/data_source.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dic/jieba_pos.txt" afterPath="$PROJECT_DIR$/files/dic/jieba_pos.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel2_true.txt" afterPath="$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel2_true.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/candidate_answer_collection.py" afterPath="$PROJECT_DIR$/model/candidate_answer_collection.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/evidence.py" afterPath="$PROJECT_DIR$/model/evidence.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/question.py" afterPath="$PROJECT_DIR$/model/question.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/questiontype.py" afterPath="$PROJECT_DIR$/model/questiontype.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parser/ltp_denpendency_parsing.py" afterPath="$PROJECT_DIR$/parser/ltp_denpendency_parsing.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parser/word_parser.py" afterPath="$PROJECT_DIR$/parser/word_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/question_type_analysis/pattern_based_multilevel_question_classifier.py" afterPath="$PROJECT_DIR$/question_type_analysis/pattern_based_multilevel_question_classifier.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qa.log" afterPath="$PROJECT_DIR$/qa.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/question_type_analysis/pattern_match_result.py" afterPath="$PROJECT_DIR$/question_type_analysis/pattern_match_result.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/question_type_analysis/pattern_match_result_selector.py" afterPath="$PROJECT_DIR$/question_type_analysis/pattern_match_result_selector.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/question_type_analysis/pattern_match_strategy.py" afterPath="$PROJECT_DIR$/question_type_analysis/pattern_match_strategy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/question_type_analysis/question_pattern.py" afterPath="$PROJECT_DIR$/question_type_analysis/question_pattern.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/question_type_analysis/question_type_pattern_file.py" afterPath="$PROJECT_DIR$/question_type_analysis/question_type_pattern_file.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/question_type_analysis/question_type_transformer.py" afterPath="$PROJECT_DIR$/question_type_analysis/question_type_transformer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/score/answer_score.py" afterPath="$PROJECT_DIR$/score/answer_score.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/score/evidence_score.py" afterPath="$PROJECT_DIR$/score/evidence_score.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selector/candidate_answer_select.py" afterPath="$PROJECT_DIR$/selector/candidate_answer_select.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/question_answering_system.py" afterPath="$PROJECT_DIR$/system/question_answering_system.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/test.py" afterPath="$PROJECT_DIR$/system/test.py" />
     </list>
     <ignored path="qasystem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,98 +69,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pattern_based_multilevel_question_classifier.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_based_multilevel_question_classifier.py">
+      <file leaf-file-name="web.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4830">
-              <caret line="230" column="33" selection-start-line="230" selection-start-column="4" selection-end-line="230" selection-end-column="33" />
+            <state relative-caret-position="256">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_medicine_db.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/evidence_retrieval/create_medicine_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#23#37#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pattern_match_result_selector.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_match_result_selector.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#62#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pattern_match_result.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_match_result.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="question_type_transformer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/question_type_analysis/question_type_transformer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="question_type_pattern_file.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/question_type_analysis/question_type_pattern_file.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="question_pattern.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/question_type_analysis/question_pattern.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pattern_match_result_item.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_match_result_item.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pattern_match_strategy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_match_strategy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="qa.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qa.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="88" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -143,6 +97,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -152,57 +107,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/parser/ss.py" />
-        <option value="$PROJECT_DIR$/parser/LTML.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/patternbased/patternbased_multilevel_questionclassifier.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/patternbased/question_pattern.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/patternbased/patternmatch_strategy.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/patternbased/__init__.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/patternbased/question_type_pattern_file.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/patternbased/pattern_match_result.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/questiontype_transformer.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/patternbased/pattern_match_result_item.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/patternbased/default_pattern_match_result_selector.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/question_classifier.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/question_type_transformer.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/pattern_match_result_selector.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/default_pattern_match_result_selector.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/patternbased_multilevel_question_classifier.py" />
-        <option value="$PROJECT_DIR$/questiontype_analysis/pattern_based_multilevel_question_classifier.py" />
-        <option value="$PROJECT_DIR$/question_type_analysis/__init__.py" />
-        <option value="$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel1_true.txt" />
-        <option value="$PROJECT_DIR$/ir/search_engine/search.py" />
-        <option value="$PROJECT_DIR$/ir/search.py" />
-        <option value="$PROJECT_DIR$/ir/templates/form2.html" />
-        <option value="$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel3_true.txt" />
-        <option value="$PROJECT_DIR$/files/dic/jieba_pos.txt" />
-        <option value="$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel2_true.txt" />
-        <option value="$PROJECT_DIR$/parser/pyltp_parser.py" />
-        <option value="$PROJECT_DIR$/../ir/spider/qaspider.py" />
-        <option value="$PROJECT_DIR$/model/candidate_answer.py" />
-        <option value="$PROJECT_DIR$/model/questiontype.py" />
-        <option value="$PROJECT_DIR$/select/candidate_answer_select.py" />
-        <option value="$PROJECT_DIR$/question_type_analysis/main_part_extracter.py" />
-        <option value="$PROJECT_DIR$/parser/ltp_denpendency_parsing.py" />
-        <option value="$PROJECT_DIR$/question_type_analysis/question_type_pattern_file.py" />
-        <option value="$PROJECT_DIR$/question_type_analysis/pattern_match_result_selector.py" />
-        <option value="$PROJECT_DIR$/question_type_analysis/pattern_match_result_item.py" />
-        <option value="$PROJECT_DIR$/question_type_analysis/pattern_match_result.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/system/test.py" />
-        <option value="$PROJECT_DIR$/parser/word_parser.py" />
-        <option value="$PROJECT_DIR$/question_type_analysis/pattern_match_strategy.py" />
-        <option value="$PROJECT_DIR$/ir/data_source.py" />
-        <option value="$PROJECT_DIR$/model/question.py" />
-        <option value="$PROJECT_DIR$/system/question_answering_system.py" />
-        <option value="$PROJECT_DIR$/selector/candidate_answer_select.py" />
-        <option value="$PROJECT_DIR$/score/answer_score.py" />
-        <option value="$PROJECT_DIR$/score/evidence_score.py" />
-        <option value="$PROJECT_DIR$/model/evidence.py" />
-        <option value="$PROJECT_DIR$/model/candidate_answer_collection.py" />
-        <option value="$PROJECT_DIR$/question_type_analysis/pattern_based_multilevel_question_classifier.py" />
-        <option value="$PROJECT_DIR$/question_type_analysis/question_type_transformer.py" />
         <option value="$PROJECT_DIR$/question_type_analysis/question_pattern.py" />
+        <option value="$PROJECT_DIR$/ir/search_engine/index.py" />
+        <option value="$PROJECT_DIR$/../ir/spider/qaspider.py" />
+        <option value="$PROJECT_DIR$/../ir/search_engine/search.py" />
+        <option value="$PROJECT_DIR$/ir/search.py" />
+        <option value="$PROJECT_DIR$/../ir/search_engine/index.py" />
+        <option value="$PROJECT_DIR$/../ir/search.py" />
+        <option value="$PROJECT_DIR$/alg.py" />
+        <option value="$PROJECT_DIR$/w2v.py" />
+        <option value="$PROJECT_DIR$/../whoosh_search/w2vtest.py" />
+        <option value="$PROJECT_DIR$/../whoosh_search/doc2vec.py" />
+        <option value="$PROJECT_DIR$/create_db.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/evidence_retrieval/search.py" />
+        <option value="$PROJECT_DIR$/../whoosh_search/search.py" />
+        <option value="$PROJECT_DIR$/score/cilin.py" />
+        <option value="$PROJECT_DIR$/evidence_retrieval/create_db.py" />
+        <option value="$PROJECT_DIR$/score/create_db.py" />
+        <option value="$PROJECT_DIR$/../whoosh_search/search_engine/index.py" />
+        <option value="$PROJECT_DIR$/files/pre_process.py" />
+        <option value="$PROJECT_DIR$/model/questiontype.py" />
+        <option value="$PROJECT_DIR$/question_type_analysis/question_type_pattern_file.py" />
+        <option value="$PROJECT_DIR$/question_type_analysis/pattern_match_strategy.py" />
+        <option value="$PROJECT_DIR$/question_type_analysis/pattern_match_result.py" />
+        <option value="$PROJECT_DIR$/question_type_analysis/pattern_based_multilevel_question_classifier.py" />
+        <option value="$PROJECT_DIR$/question_type_analysis/pattern_match_result_selector.py" />
+        <option value="$PROJECT_DIR$/model/candidate_answer_collection.py" />
+        <option value="$PROJECT_DIR$/model/evidence.py" />
+        <option value="$PROJECT_DIR$/parser/word_parser.py" />
+        <option value="$PROJECT_DIR$/question_type_analysis/question_type_transformer.py" />
+        <option value="$PROJECT_DIR$/score/answer_score.py" />
+        <option value="$PROJECT_DIR$/selector/candidate_answer_select.py" />
+        <option value="$PROJECT_DIR$/evidence_retrieval/spider/qaspider.py" />
+        <option value="$PROJECT_DIR$/evidence_retrieval/spider/baidu_medicinespider.py" />
+        <option value="$PROJECT_DIR$/evidence_retrieval/index.py" />
+        <option value="$PROJECT_DIR$/files/dic/stop_words_ch.txt" />
+        <option value="$PROJECT_DIR$/parser/ltp_denpendency_parsing.py" />
+        <option value="$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel2_true.txt" />
+        <option value="$PROJECT_DIR$/files/dic/try.py" />
+        <option value="$PROJECT_DIR$/../whoosh_search/spider/qaspider.py" />
+        <option value="$PROJECT_DIR$/selector/candidate_evidence_select.py" />
+        <option value="$PROJECT_DIR$/system/question_answering_system.py" />
+        <option value="$PROJECT_DIR$/score/sentence_similarity.py" />
+        <option value="$PROJECT_DIR$/evidence_retrieval/data_source.py" />
+        <option value="$PROJECT_DIR$/score/word_similarity.py" />
+        <option value="$PROJECT_DIR$/qa.log" />
+        <option value="$PROJECT_DIR$/model/question.py" />
+        <option value="$PROJECT_DIR$/score/evidence_score.py" />
+        <option value="$PROJECT_DIR$/system/templates/form2.html" />
+        <option value="$PROJECT_DIR$/system/web.py" />
+        <option value="$PROJECT_DIR$/system/templates/form3.html" />
       </list>
     </option>
   </component>
@@ -245,95 +200,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qasystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qasystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qasystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qasystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="question_type_analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qasystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qasystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="files" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ir/spider/qaspider.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test/FlaskConnectAjax/src/run.py" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.File Status" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/system" />
-      <recent name="$PROJECT_DIR$/questiontype_analysis/" />
+      <recent name="$PROJECT_DIR$/system/" />
+      <recent name="$PROJECT_DIR$/system/templates/static" />
+      <recent name="$PROJECT_DIR$/files/cilin" />
+      <recent name="$PROJECT_DIR$/cilin" />
+      <recent name="$PROJECT_DIR$/files" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pattern_based_multilevel_question_classifier">
-    <configuration default="false" name="pattern_based_multilevel_question_classifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/question_type_analysis" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="qasystem" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/question_type_analysis/pattern_based_multilevel_question_classifier.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="data_source" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ir" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="qasystem" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ir/data_source.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.web">
     <configuration default="false" name="question_answering_system" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -351,19 +238,19 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="data_source" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/evidence_retrieval" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="qasystem" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/system/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evidence_retrieval/data_source.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -381,6 +268,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="qasystem" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/score/evidence_score.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="web" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/system" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="qasystem" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/system/web.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../test/FlaskConnectAjax/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="qasystem" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../test/FlaskConnectAjax/src/run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -551,19 +472,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.question" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pattern_based_multilevel_question_classifier" />
+      <item index="1" class="java.lang.String" itemvalue="Python.question_answering_system" />
       <item index="2" class="java.lang.String" itemvalue="Python.data_source" />
-      <item index="3" class="java.lang.String" itemvalue="Python.question_answering_system" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test" />
-      <item index="5" class="java.lang.String" itemvalue="Python.evidence_score" />
+      <item index="3" class="java.lang.String" itemvalue="Python.evidence_score" />
+      <item index="4" class="java.lang.String" itemvalue="Python.web" />
+      <item index="5" class="java.lang.String" itemvalue="Python.run" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pattern_based_multilevel_question_classifier" />
-        <item index="1" class="java.lang.String" itemvalue="Python.question_answering_system" />
+        <item index="0" class="java.lang.String" itemvalue="Python.web" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run" />
         <item index="2" class="java.lang.String" itemvalue="Python.evidence_score" />
         <item index="3" class="java.lang.String" itemvalue="Python.data_source" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.question_answering_system" />
       </list>
     </recent_temporary>
   </component>
@@ -575,14 +496,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1419" y="24" width="1867" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24638458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2367049" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19657204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19490586" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.089676745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49217936" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3096976" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5016611" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -613,120 +534,153 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/system/question_answering_system.py</url>
-          <line>105</line>
-          <option name="timeStamp" value="23" />
+          <url>file://$PROJECT_DIR$/score/sentence_similarity.py</url>
+          <line>123</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/evidence_retrieval/data_source.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/default_pattern_match_result_selector.py" />
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/question_classifier.py" />
-    <entry file="file://$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel1_true.txt">
+    <entry file="file://$PROJECT_DIR$/score/answer_score.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        <state relative-caret-position="-378">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ir/search.py" />
-    <entry file="file://$PROJECT_DIR$/parser/LTML.py">
+    <entry file="file://$PROJECT_DIR$/evidence_retrieval/spider/zhihu_spider.py" />
+    <entry file="file://$PROJECT_DIR$/evidence_retrieval/spider/qaspider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="63">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/requests/models.py">
+    <entry file="file://$PROJECT_DIR$/evidence_retrieval/spider/xunyispider.ipynb" />
+    <entry file="file://$PROJECT_DIR$/evidence_retrieval/spider/baikesipde.ipynb" />
+    <entry file="file://$PROJECT_DIR$/evidence_retrieval/spider/baidu_medicinespider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3340">
-          <caret line="655" column="23" selection-start-line="655" selection-start-column="23" selection-end-line="655" selection-end-column="23" />
+        <state relative-caret-position="84">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ir/search_engine/search.py" />
-    <entry file="file://$PROJECT_DIR$/ir/templates/form.html">
+    <entry file="file://$PROJECT_DIR$/evidence_retrieval/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="27" />
+        <state relative-caret-position="-453">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ir/templates/form2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel3_true.txt">
+    <entry file="file://$PROJECT_DIR$/files/cilin/cilin.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/dic/jieba_pos.txt">
+    <entry file="file://$PROJECT_DIR$/files/dic/stop_words_ch.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1281">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/dic/stopwords.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28487">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/dic/jieba_pos (pre).txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser/ltp_denpendency_parsing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel2_true.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        <state relative-caret-position="462">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3.5/json/decoder.py">
+    <entry file="file://$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel1_true.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+        <state relative-caret-position="623">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/requests/api.py">
+    <entry file="file://$PROJECT_DIR$/model/questiontype.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state relative-caret-position="539">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+    <entry file="file://$PROJECT_DIR$/files/questionTypePattern/QuestionTypePatternsLevel3_true.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmEdu30/system/python_stubs/-1247971764/pyltp.py">
+    <entry file="file://$PROJECT_DIR$/files/dic/try.py" />
+    <entry file="file://$PROJECT_DIR$/files/dic/jieba_pos.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5649">
-          <caret line="269" column="8" selection-start-line="269" selection-start-column="8" selection-end-line="269" selection-end-column="8" />
+        <state relative-caret-position="749">
+          <caret line="19619" column="0" selection-start-line="19619" selection-start-column="0" selection-end-line="19619" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ir/spider/qaspider.py">
+    <entry file="file://$PROJECT_DIR$/files/dic/sympton.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        <state relative-caret-position="-126">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.5/dist-packages/jieba/posseg/__init__.py">
+    <entry file="file://$PROJECT_DIR$/parser/word_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1068">
-          <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ir/test.log">
+    <entry file="file://$PROJECT_DIR$/../whoosh_search/spider/qaspider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1030">
+          <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_based_question_classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="251" column="14" selection-start-line="251" selection-start-column="12" selection-end-line="252" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evidence_retrieval/medicine.db">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -734,25 +688,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/score/__init__.py">
+    <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_match_result.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="504">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selector/__init__.py">
+    <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_match_result_selector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="317">
+          <caret line="36" column="81" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/main_part_extracter.py" />
-    <entry file="file://$PROJECT_DIR$/ir/search.py">
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/jieba/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-924">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="170">
+          <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selector/candidate_evidence_select.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selector/candidate_answer_select.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="e#17#88#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/candidate_answer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/candidate_answer_collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="26" column="85" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/whoosh/searching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -765,240 +767,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/test.log">
+    <entry file="file://$PROJECT_DIR$/system/templates/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/test.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="4467" column="0" selection-start-line="4467" selection-start-column="0" selection-end-line="4467" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="43" />
+        <state relative-caret-position="357">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/question_answering_system.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selector/candidate_answer_select.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="-238">
+          <caret line="104" column="49" selection-start-line="104" selection-start-column="49" selection-end-line="104" selection-end-column="49" />
           <folding>
-            <element signature="e#0#71#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/score/evidence_score.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/test.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/score/answer_score.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#50#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parser/word_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parser/ltp_denpendency_parsing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/candidate_answer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ir/data_source.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parser/pyltp_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/candidate_answer_collection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/questiontype.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/question.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#53#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/evidence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        <state relative-caret-position="-168">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/cilin.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evidence_retrieval/data_source.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="51" column="56" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="56" />
           <folding>
-            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/word_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="87" column="119" selection-start-line="87" selection-start-column="119" selection-end-line="87" selection-end-column="119" />
+          <folding>
+            <element signature="e#0#14#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/question.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evidence_retrieval/web_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/qa.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="88" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
+        <state relative-caret-position="42">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_based_multilevel_question_classifier.py">
+    <entry file="file://$PROJECT_DIR$/score/evidence_score.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4830">
-          <caret line="230" column="33" selection-start-line="230" selection-start-column="4" selection-end-line="230" selection-end-column="33" />
+        <state relative-caret-position="189">
+          <caret line="128" column="38" selection-start-line="128" selection-start-column="38" selection-end-line="128" selection-end-column="38" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/question_type_transformer.py">
+    <entry file="file://$PROJECT_DIR$/score/sentence_similarity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="1071">
+          <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/templates/form2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/FlaskConnectAjax/src/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-824">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/FlaskConnectAjax/src/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/question_pattern.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_match_strategy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/question_type_pattern_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_match_result_item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_match_result.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/question_type_analysis/pattern_match_result_selector.py">
+    <entry file="file://$PROJECT_DIR$/system/templates/form3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evidence_retrieval/create_medicine_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
-            <element signature="e#0#62#0" expanded="true" />
+            <element signature="e#23#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

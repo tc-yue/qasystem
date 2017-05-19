@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Baidu</title>
+
 </head>
 <body>
-    <form action="/chat" method="post">
+    <form action="/chat" method="post" >
       <p align="center"><legend >Please input:</legend></p>
       <p align="center"><input name="word" placeholder="检索词" value="{{ word }}"></p>
-      <p align="center"><button type="submit" >百度一下</button></p>
+      <p align="center"><button type="submit">百度一下</button></p>
     </form>
     {% if page_list %}
-        <p>{{page_list}}</p>
+
+         <p>{{page_list}}</p>
+
+
     {% endif %}
+
+
 </body>
 </html>

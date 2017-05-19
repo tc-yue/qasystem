@@ -8,11 +8,15 @@ from enum import Enum,unique
 class QuestionType(Enum):
     Null = 'unknown'
     Medicine = 'medicine'
+    # 适应症,禁忌,用法,不良反应
+    Indications = 'indications'
+    # Contraindications = 'contraindications'
+    # Dosage = 'dosage'
+    # Adversereactions = 'adversereactions'
     Price = 'price'
     Hospital = 'hospital'
     Doctor = 'doctor'
     Solution = 'solution'
-    Description = 'description'
 
     def __init__(self, des):
         self.des = des
@@ -25,12 +29,14 @@ class QuestionType(Enum):
         if QuestionType.Doctor == self:
             pos = 'nr'
         elif QuestionType.Medicine == self:
-            pos = 'nz'
+            pos = 'nmediciennmae'
         elif QuestionType.Price == self:
             pos = 'm'
         elif QuestionType.Hospital == self:
             pos = 'nt'
         elif QuestionType.Solution == self:
+            pos = 'n'
+        elif QuestionType.Indications == self:
             pos = 'n'
         return pos
 

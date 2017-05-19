@@ -23,6 +23,7 @@ class CandidateAnswerCollection:
             return False
 
     def get_all_candidate_answer(self):
+        # 按候选答案分值排序
         return sorted(self.__candidate_answers, key=lambda ans: ans.get_score(), reverse=True)
 
     def show_all(self):

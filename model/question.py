@@ -16,9 +16,17 @@ class Question:
         self.__candidate_question_types = set()
         self.__evidences = []
         self.__expect_answer = ''
+        self.__disease = []
+        self.__idf_dic = {}
 
     def set_question(self, question):
         self.__question = question
+        # 问题设置疾病症状关键词
+        word_pos_list = WordParser.parse(self.__question)
+        self.__disease = [i[0] for i in word_pos_list if i[1] == 'nobjectdisease']
+
+    def get_disease(self):
+        return self.__disease
 
     def get_question(self):
         return self.__question
@@ -53,6 +61,7 @@ class Question:
 
     def add_evidences(self, evidences):
         self.__evidences.extend(evidences)
+        self.init_idf()
 
     def add_evidence(self, evidence):
         self.__evidences.append(evidence)
@@ -62,19 +71,20 @@ class Question:
 
     # 获取证据每个词的idf
     def init_idf(self):
-        idf_dict = {}
         for evidence in self.__evidences:
             word_set = set(WordParser.lcut(evidence.get_title() + evidence.get_snippet()))
             for item in word_set:
-                doc = idf_dict.get(item)
+                doc = self.__idf_dic.get(item)
                 if doc is None:
                     doc = 1
                 else:
                     doc += 1
-                idf_dict[item] = doc
-        for i in idf_dict.keys():
-            idf_dict[i] = 1 / idf_dict[i]
-        return idf_dict
+                self.__idf_dic[item] = doc
+        for i in self.__idf_dic.keys():
+            self.__idf_dic[i] = 1 / self.__idf_dic[i]
+
+    def get_idf(self):
+        return self.__idf_dic
 
     def get_hot(self):
         question_words = self.get_words()
